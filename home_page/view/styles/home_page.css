@@ -1,0 +1,24 @@
+@import url(./header.css);
+body {
+    background-color: rgb(26, 26, 26);
+}
+.banner {
+    width: 100%;
+    padding: 2vh;
+    background: #1a0a00;
+    border: 2px solid #cc5500;
+    border-radius: 0.5em;
+    text-align: center;
+    margin-bottom: 2vh;
+}
+
+.banner-img {
+    font-size: 4rem;
+    transition: all 0.5s ease;
+}
+
+.banner p {
+    color: #e8a840;
+    font-size: 1.2rem;
+    margin-top: 1vh;
+}

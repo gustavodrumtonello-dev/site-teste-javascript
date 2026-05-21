@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acesso ao Sistema</title>
+    <!-- Font Awesome CDN para os ícones do olho funcionarem -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <!-- Chamamos apenas o index.css, que por sua vez importa os outros -->
+    <link rel="stylesheet" href="./login_page/styles/index.css">
+    <link rel="stylesheet" href="./login_page/controller/index.js">
+</head>
+<body>
+
+    <div class="card-container">
+
+        <!-- SEÇÃO DE LOGIN -->
+        <section class="div_Login">
+            <h2>Login</h2>
+            
+            <div class="input-wrapper">
+                <input type="email" id="loginEmail" placeholder="exemplo@email.com">
+            </div>
+            
+            <div class="input-wrapper password-wrapper">
+                <input type="password" id="loginPassword" placeholder="********">
+                <button type="button" class="toggle-password" aria-label="Alternar visibilidade da senha">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+            
+            <button id="btnLogin">Login</button>
+            <a href="#" id="linkCadastro">Criar conta</a>
+        </section>
+
+        <!-- SEÇÃO DE CADASTRO -->
+        <div class="div_Cadastro" style="display: none;">
+            <h2>Cadastro</h2>
+            
+            <div class="input-wrapper">
+                <input type="text" id="cadNome" placeholder="Nome completo">
+            </div>
+            
+            <div class="input-wrapper">
+                <input type="email" id="cadEmail" placeholder="Email">
+            </div>
+            
+            <div class="input-wrapper password-wrapper">
+                <input type="password" id="cadSenha" placeholder="Senha">
+                <button type="button" class="toggle-password" aria-label="Alternar visibilidade da senha">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+            
+            <div class="input-wrapper password-wrapper">
+                <input type="password" id="cadConfirmarSenha" placeholder="Confirmar senha">
+                <button type="button" class="toggle-password" aria-label="Alternar visibilidade da senha">
+                    <i class="fa-solid fa-eye"></i>
+                </button>
+            </div>
+            
+            <button id="btnCadastrar">Cadastrar</button>
+            <a href="#" id="linkVoltar">Já tenho conta</a>
+        </div>
+
+    </div>
+
+    <!-- Scripts carregados em ordem de dependência -->
+    <script src="./login_page/controller/shared.js"></script>
+    <script src="./login_page/controller/login.js"></script>
+    <script src="./login_page/controller/cadastro.js"></script>
+    <script src="./login_page/controller/index.js"></script>
+</body>
+</html>

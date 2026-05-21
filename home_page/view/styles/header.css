@@ -1,0 +1,35 @@
+
+
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1vh 2vh;
+    background: #00001a;
+    border-bottom: 2px solid #000ecc;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+.logo {
+    font-size: 2rem;
+}
+
+.nav {
+    display: flex;
+    gap: 2vh;
+}
+
+.nav a {
+    color: #3c4fff;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.nav a:hover {
+    color: #8b0000;
+}

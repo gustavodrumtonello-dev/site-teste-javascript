@@ -1,0 +1,4 @@
+/* O recurso @import junta todos os arquivos em uma única requisição para o HTML */
+@import url(./shared.css);
+@import url(./login.css);
+@import url(./cadastro.css);
