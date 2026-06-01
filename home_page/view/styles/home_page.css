@@ -1,11 +1,12 @@
 @import url(./header.css);
+@import url(./banner.css);
 body {
     background-color: rgb(26, 26, 26);
 }
 .banner {
     width: 100%;
     padding: 2vh;
-    background: #1a0a00;
+    background: #ff6200;
     border: 2px solid #cc5500;
     border-radius: 0.5em;
     text-align: center;

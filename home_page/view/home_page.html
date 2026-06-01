@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
         <link rel="stylesheet" href="./styles/home_page.css">
+        <script type="module" src="./../controller/home_page.js" defer></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
     </head>
     <body>
         <header class="header">
@@ -16,15 +19,17 @@
         </header>
 
         <nav id="nav-banner">
-            <div id="btn-banner-esquerdo"></div>
+            <div id="btn-banner-esquerdo" onclick="moverBanner('E')"><i class="fa-solid fa-angle-left"></i></div>
             <div id="banner">
-                <div>verm</div>
-                <div>amar</div>
-                <div>azul</div>
-                <div>verd</div>
-                <div>roxo</div>
+                <div id="navegacao-banner">
+                    <div class="verm"></div>
+                    <div class="amar"></div>
+                    <div class="azul"></div>
+                    <div class="verd"></div>
+                    <div class="roxo"></div>
+                </div>
             </div>
-            <div id="btn-banner-direito"></div>
+            <div id="btn-banner-direito" onclick="moverBanner('D')"><i class="fa-solid fa-angle-right"></i></div>
         </nav>
     </body>
 </html>

@@ -1,27 +1,60 @@
-#nav-banner{
+/* Configuração do contêiner principal do banner (onde ficam as setas e os banners) */
+#nav-banner {
     display: flex;
+    padding: 3vw;
 }
 
-#btn-banner-esquerdo, #btn-banner-direito{
-    width: 6vw;
+#btn-banner-esquerdo, #btn-banner-direito {
+    width: 6vh;
     height: 40vh;
-    background-color: #ff0000;
+
     display: flex;
     justify-content: center;
     align-items: center;
-}
 
-#banner{
+
+    font-size: 5vw;
+    color: var(--primary);
+    cursor: pointer;
+    padding: 5vh;
+
+
+}
+/* Onde os 5 banners ficam, um do lado do outro */
+#banner {
     width: 80vw;
     height: 40vh;
-    background-color: #ff0000;
+    margin: 0 1vw; 
 
-    overflow-x: hidden;
+    overflow:hidden; 
+    position: relative; 
 
+
+    padding: 5vh;
 }
 
-#banner div{
+#navegacao-banner{
+    position: absolute;
+    left: 0vw;
+    display: flex;
+    transition: all 0.3s ease-in-out;
+}
+
+
+#navegacao-banner div{
     width: 80vw;
-    height:40vh;
+    height: 40vh;
     flex-shrink: 0;
+}
+
+.verm { background-color: red; }
+.amar { background-color: yellow; }
+.azul { background-color: darkblue; }
+.verd { background-color: green; }
+.roxo { background-color: purple; }
+
+
+.fa-solid {
+    color: rgb(7, 43, 119);
+    border-color: rgb(0, 1, 77);
 }
