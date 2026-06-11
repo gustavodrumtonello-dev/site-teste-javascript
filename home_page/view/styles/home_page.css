@@ -1,7 +1,8 @@
 @import url(./header.css);
 @import url(./banner.css);
+@import url(./cards.css);
 body {
-    background-color: rgb(26, 26, 26);
+    background-color: #182130;
 }
 .banner {
     width: 100%;
@@ -22,4 +23,12 @@ body {
     color: #e8a840;
     font-size: 1.2rem;
     margin-top: 1vh;
+}
+
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* Garante que o header fique na frente de outros elementos */
 }

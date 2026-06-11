@@ -1,7 +1,11 @@
 /* Configuração do contêiner principal do banner (onde ficam as setas e os banners) */
 #nav-banner {
     display: flex;
-    padding: 3vw;
+    align-items: center; 
+    justify-content: center;   
+    width: 97vw;
+    height: 50vh;
+    padding: 4vw;
 }
 
 #btn-banner-esquerdo, #btn-banner-direito {
@@ -55,6 +59,6 @@
 
 
 .fa-solid {
-    color: rgb(7, 43, 119);
+    color: #dc2626;
     border-color: rgb(0, 1, 77);
 }

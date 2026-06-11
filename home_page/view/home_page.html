@@ -5,13 +5,14 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home Page</title>
         <link rel="stylesheet" href="./styles/home_page.css">
+        <link rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
         <script type="module" src="./../controller/home_page.js" defer></script>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 
     </head>
     <body>
         <header class="header">
-            <div class="logo">🍎</div>
+            <div class="logo"><i class="fa-solid fa-earth-europe"></i></div>
             <nav class="nav">
                 <a href="#" class="link-home">Home</a>
                 <a href="#" class="link-profile">Profile</a>
@@ -19,7 +20,8 @@
         </header>
 
         <nav id="nav-banner">
-            <div id="btn-banner-esquerdo" onclick="moverBanner('E')"><i class="fa-solid fa-angle-left"></i></div>
+            <div id="btn-banner-esquerdo" onclick="moverBanner('E')"><i
+                    class="fa-solid fa-angle-left"></i></div>
             <div id="banner">
                 <div id="navegacao-banner">
                     <div class="verm"></div>
@@ -29,7 +31,32 @@
                     <div class="roxo"></div>
                 </div>
             </div>
-            <div id="btn-banner-direito" onclick="moverBanner('D')"><i class="fa-solid fa-angle-right"></i></div>
+            <div id="btn-banner-direito" onclick="moverBanner('D')"><i
+                    class="fa-solid fa-angle-right"></i></div>
         </nav>
+
+        <section id="cards_sec">
+            <!-- <div>
+                <div class="card-client">
+                    <div class="user-picture">
+                        <img
+                            src="https://biohub.org/wp-content/uploads/sites/32/2024/08/mark-zuckerberg@2x.png"
+                            alt="Foto de Mark Zuckerberg">
+                    </div>
+                    <p class="name-client"> Mark Zuckerberg
+                        <span>CEO of Facebook</span>
+                    </p>
+                    <div class="social-media">
+                        <a href="#">
+                            <i class="fa-brands fa-twitter"></i>
+                        </a>
+                        <a href="#">
+                            <i class="fa-brands fa-github"></i>
+                        </a>
+                    </div>
+                </div>
+            </div> -->
+
+        </section>
     </body>
 </html>

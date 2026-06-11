@@ -1,0 +1,110 @@
+#cards_sec {
+    width:30vw;
+    padding: 3vh;
+    display: grid;
+    justify-content: center;
+    grid-template-columns: 20vw;
+}
+
+.card-client {
+    width: 100vw;
+    height: 50vh;
+    margin: 6vw 1vw;
+    border: 1px solid #000000;
+    background-color: #ffe600;
+
+}
+
+/* From Uiverse.io by JaydipPrajapati1910 */
+.card-client {
+    background: #dc2626;
+    width: 30vw;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    padding-left: 4em;
+    padding-right: 20px;
+    border: 4px solid  #94a3b8;
+    box-shadow: 0 6px 10px #212121;
+    border-radius: 10px;
+    text-align: center;
+    color:  #94a3b8;
+    font-family: "Poppins", sans-serif;
+    transition: all 0.3s ease;
+}
+
+
+.card-client:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 20px #212121;
+}
+
+.user-picture img {
+    width: 8vw;
+    height: 8vw;
+    border-radius: 50%;
+}
+
+.name-client {
+    margin: 0;
+    margin-top: 5vh;
+    font-weight: 600;
+    font-size: 1.5em;
+}
+
+.name-client span {
+    display: block;
+    font-weight: 200;
+    font-size: 0.8em;
+}
+
+.social-media:before {
+    content: " ";
+    display: block;
+    width: 11vw;
+    height: 0.3vh;
+    margin-top: 1vh;
+    background:  #94a3b8;
+}
+
+.social-media a {
+    width: 100vw;
+    position: relative;
+    margin-right: 0.5vw;
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-media a:last-child {
+    margin-right: 0;
+}
+
+.social-media{
+    margin-top: 1vh;
+}
+
+.social-media a svg {
+    width: 100vw;
+    fill: currentColor;
+}
+
+
+
+.tooltip-social:after {
+    content: " ";
+    position: absolute;
+    bottom: 1px;
+    left: 50%;
+    border: solid;
+    border-width: 10px 10px 0 10px;
+    border-color: transparent;
+    transform: translate(-50%, 100%);
+}
+
+.social-media a .tooltip-social:after {
+    border-top-color: #262626;
+}
+
+.social-media a:hover .tooltip-social {
+    opacity: 1;
+    transform: translate(-50%, -130%);
+}
