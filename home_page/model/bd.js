@@ -21,7 +21,7 @@ export const bd = [
         link_github: 'https://github.com/biadesign'
     },
     {
-        nome: 'Thiago oliveira', // Teste de string em caixa baixa
+        nome: 'Thiago oliveira', 
         profissao: 'Desenvolvedor Backend',
         img_profile: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150',
         link_twitter: 'https://twitter.com/thioliveira',

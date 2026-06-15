@@ -2,7 +2,7 @@ import { bd } from "../model/bd.js";
 
 
 export function createCards(cards_sec) {
-    bd.map((dado_cartao) => {
+    bd.map((dado_cartao, index) => {
         const div_card = document.createElement('div');
         div_card.className = 'card'
 
@@ -33,7 +33,7 @@ export function createCards(cards_sec) {
         twitterIcon.className = 'fa-brands fa-twitter';
         twitterLink.appendChild(twitterIcon);
 
-        
+
 
         const githubLink = document.createElement('a');
         githubLink.href = dado_cartao.link_github;
@@ -44,10 +44,20 @@ export function createCards(cards_sec) {
         socialMedia.appendChild(twitterLink);
         socialMedia.appendChild(githubLink);
 
+        const btnPerfil = document.createElement('button');
+        btnPerfil.className = 'btn-perfil';
+        btnPerfil.textContent = 'Ver Perfil';
+
+        // Adiciona evento de clique para redirecionar para o perfil
+        btnPerfil.addEventListener('click', () => {
+            window.location.href = `../../perfil_usuarios_page/perfil_usuarios.html?id=${index}`;
+        });
+
         div_card_client.appendChild(userPicture);
         div_card_client.appendChild(nameClient);
         div_card_client.appendChild(profClient);
         div_card_client.appendChild(socialMedia);
+        div_card_client.appendChild(btnPerfil);
 
         div_card.appendChild(div_card_client);
 
