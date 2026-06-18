@@ -1,64 +1,93 @@
-/* Configuração do contêiner principal do banner (onde ficam as setas e os banners) */
+/* Configuração do contêiner principal do banner */
 #nav-banner {
     display: flex;
-    align-items: center; 
-    justify-content: center;   
+    align-items: center;
+    justify-content: center;
+
     width: 97vw;
+    /* O seu vw original */
     height: 50vh;
+    /* O seu vh original */
+    margin: 0 auto;
+    /* Isso aqui é o que vai centralizar na tela! */
     padding: 4vw;
 }
 
-#btn-banner-esquerdo, #btn-banner-direito {
+/* Setas de navegação */
+#btn-banner-esquerdo,
+#btn-banner-direito {
     width: 6vh;
     height: 40vh;
-
     display: flex;
     justify-content: center;
     align-items: center;
-
-
     font-size: 5vw;
     color: var(--primary);
     cursor: pointer;
-    padding: 5vh;
-
-
+    transition: transform 0.2s ease, color 0.2s ease;
 }
-/* Onde os 5 banners ficam, um do lado do outro */
+
+#btn-banner-esquerdo:hover,
+#btn-banner-direito:hover {
+    color: var(--primary-hover);
+    transform: scale(1.2);
+}
+
+#btn-banner-esquerdo:active,
+#btn-banner-direito:active {
+    transform: scale(0.9);
+}
+
+/* A "janela" do carrossel */
 #banner {
     width: 80vw;
+    /* Largura original */
     height: 40vh;
-    margin: 0 1vw; 
-
-    overflow:hidden; 
-    position: relative; 
-
-
-    padding: 5vh;
+    margin: 0 1vw;
+    overflow: hidden;
+    position: relative;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
 }
 
-#navegacao-banner{
+/* O trilho que desliza */
+#navegacao-banner {
     position: absolute;
-    left: 0vw;
+    left: 0;
     display: flex;
-    transition: all 0.3s ease-in-out;
+    transition: left 0.3s ease-in-out;
 }
 
-
-#navegacao-banner div{
+/* Cada um dos 5 banners */
+#navegacao-banner div {
     width: 80vw;
+    /* TEM que ser igual ao #banner */
     height: 40vh;
     flex-shrink: 0;
+    background-size: cover;
+    /* Faz a imagem cobrir todo o espaço */
+    background-position: center;/
 }
 
-.verm { background-color: red; }
-.amar { background-color: yellow; }
-.azul { background-color: darkblue; }
-.verd { background-color: green; }
-.roxo { background-color: purple; }
 
 
-.fa-solid {
-    color: #dc2626;
-    border-color: rgb(0, 1, 77);
+/* Imagens do Banner (Pessoas conversando, tecnologia e equipes) */
+.verm {
+    background-image: url('https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=900&q=80');
+}
+
+.amar {
+    background-image: url('https://images.unsplash.com/photo-1542744173-8e7e53415bb0?w=900&q=80');
+}
+
+.azul {
+    background-image: url('https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=900&q=80');
+}
+
+.verd {
+    background-image: url('https://images.unsplash.com/photo-1531482615713-2afd69097998?w=900&q=80');
+}
+
+.roxo {
+    background-image: url('https://images.unsplash.com/photo-1521737604893-d14cc237f11d?w=900&q=80');
 }

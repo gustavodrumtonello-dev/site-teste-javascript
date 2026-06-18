@@ -1,34 +1,83 @@
+/* 1. Importando os módulos do nosso CSS (Arquitetura Feature-in-first) */
 @import url(./header.css);
 @import url(./banner.css);
 @import url(./cards.css);
+
+/* 
+  2. CRIANDO NOSSO DESIGN SYSTEM (VARIÁVEIS)
+  Usar variáveis (:root) aqui permite que todos os arquivos importados 
+  (banner, header, cards) usem essas cores. Isso resolve o erro do var(--primary)!
+*/
+:root {
+    --bg-global: #182130;
+    /* Cor de fundo principal */
+    --bg-card: #1e293b;
+    /* Cor de fundo dos menus e cards */
+    --primary: #dc2626;
+    /* Vermelho destaque */
+    --primary-hover: #ff6200;
+    /* Laranja para efeitos visuais (hover) */
+    --text-main: #f8fafc;
+    /* Branco/Gelo para leitura confortável */
+    --text-muted: #94a3b8;
+    /* Cinza azulado para textos secundários */
+}
+
+/* 
+  3. GLOBAL RESET
+  Remove as margens automáticas do navegador e define a fonte do site.
+*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+}
+
+/* 
+  4. ESTRUTURA DO CORPO DA PÁGINA 
+*/
 body {
-    background-color: #182130;
-}
-.banner {
-    width: 100%;
-    padding: 2vh;
-    background: #ff6200;
-    border: 2px solid #cc5500;
-    border-radius: 0.5em;
-    text-align: center;
-    margin-bottom: 2vh;
+    background-color: var(--bg-global);
+    color: var(--text-main);
+    /* Como o Header tem "position: fixed", ele flutua. 
+       Damos esse padding para o banner não entrar por baixo dele. */
+    padding-top: 10vh;
 }
 
-.banner-img {
-    font-size: 4rem;
-    transition: all 0.5s ease;
-}
-
-.banner p {
-    color: #e8a840;
-    font-size: 1.2rem;
-    margin-top: 1vh;
-}
-
+/* 
+  5. LAYOUT DO CABEÇALHO (Posição Global)
+*/
 header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000; /* Garante que o header fique na frente de outros elementos */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Garante que o header fique na frente de tudo */
+    background-color: var(--bg-card);
+    /* Integrado com a nossa variável */
+}
+
+/* ========================================================
+   TOQUE PREMIUM: Barra de rolagem (Scrollbar) personalizada
+   ======================================================== */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-global);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--bg-card);
+    border-radius: 6px;
+    border: 3px solid var(--bg-global);
+    /* Cria um contorno muito elegante */
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary);
+    /* A barra de rolagem acende ao passar o mouse */
 }

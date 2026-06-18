@@ -1,11 +1,8 @@
-
-
-
 .header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1.5vh;
+    padding: 2vh;
     background-color: #1e293b;
     position: fixed;
 }
@@ -29,11 +26,17 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 1.2rem;
+    /* A transition cria uma animação fluida para propriedades que mudarem */
+    transition: color 0.3s ease, transform 0.3s ease;
 }
 
 .nav a:hover {
-    color: #94a3b8;
+    color: #f8fafc;
+    /* Fica branco/claro para acender o texto */
+    transform: translateY(-3px);
+    /* Faz o link 'flutuar' levemente para cima */
 }
+
 
 .fa-solid {
     color: #dc2626;

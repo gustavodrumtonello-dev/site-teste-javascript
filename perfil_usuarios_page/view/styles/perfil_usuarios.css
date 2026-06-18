@@ -1,151 +1,159 @@
-/* perfil_usuarios_page/styles/perfil_usuarios.css */
-
+/* RESET DA PÁGINA */
 body {
-    font-family: "Poppins", Arial, sans-serif;
+    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #182130;
-    /* Fundo escuro igual ao da Home */
-    color: #94a3b8;
+    background-color: #0f172a;
+    /* Um fundo escuro bem elegante */
+    color: #f8fafc;
+    padding-top: 10vh;
+    /* Dá espaço para o header não cobrir a capa! */
 }
 
-/* Estilos do Header */
+/* 1. HEADER GLOBAL */
 .perfil-header {
     background-color: #1e293b;
-    /* Mesma cor do header da Home */
-    padding: 1.5vh 2vw;
+    padding: 2vh 5vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    box-sizing: border-box;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
 }
 
 .perfil-logo {
-    font-size: 2rem;
+    font-size: 1.5rem;
     font-weight: bold;
     color: #dc2626;
-    /* Vermelho do logo da Home */
+    /* Nosso vermelho principal */
 }
 
 .btn-voltar-home {
-    padding: 0.6rem 1.2rem;
-    background-color: #182130;
+    padding: 8px 16px;
+    background-color: transparent;
     color: #94a3b8;
-    border: 2px solid #94a3b8;
-    border-radius: 5px;
+    border: 1px solid #94a3b8;
+    border-radius: 6px;
     cursor: pointer;
-    font-weight: bold;
-    font-size: 1rem;
-    transition: all 0.3s ease;
+    font-weight: 600;
+    transition: all 0.2s;
 }
 
 .btn-voltar-home:hover {
     background-color: #94a3b8;
-    color: #182130;
+    color: #0f172a;
 }
 
-/* Container principal do perfil */
+/* 2. O CORPO DO PERFIL */
 #profile-sec {
+    width: 100%;
     display: flex;
     justify-content: center;
-    align-items: center;
-    padding: 4em 20px;
-    min-height: 80vh;
 }
 
-.perfil-container {
-    max-width: 600px;
+.fb-perfil-container {
     width: 100%;
-    background-color: #dc2626;
-    /* Fundo vermelho igual aos cards da Home */
-    border: 4px solid #94a3b8;
-    /* Borda igual aos cards */
-    border-radius: 10px;
-    padding: 3rem;
-    box-shadow: 0 6px 10px #212121;
-    text-align: center;
-    color: #94a3b8;
-    transition: all 0.3s ease;
+    max-width: 1100px;
+    /* Tamanho exato do layout de PCs do Facebook/X */
+    background-color: #1e293b;
+    /* A cor do "quadro" principal */
+    border-radius: 0 0 12px 12px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
+    overflow: hidden;
+    margin-bottom: 50px;
 }
 
-/* Efeito de flutuação ao passar o mouse */
-.perfil-container:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 20px #212121;
+/* A FOTO DE CAPA */
+.fb-cover-photo {
+    width: 100%;
+    height: 350px;
+    background-size: cover;
+    background-position: center;
 }
 
-/* Foto e Textos */
-.perfil-avatar {
-    width: 150px;
-    height: 150px;
+/* CAIXA COM AS INFOS DEBAIXO DA CAPA */
+.fb-info-section {
+    padding: 0 40px 40px 40px;
+    display: flex;
+    flex-direction: column;
+}
+
+/* O TRUQUE DE MESTRE DA FOTO SOBREPOSTA! */
+.fb-avatar-wrapper {
+    margin-top: -80px;
+    /* <--- Puxa a foto para CIMA da capa! */
+    margin-bottom: 20px;
+}
+
+.fb-avatar {
+    width: 160px;
+    height: 160px;
     border-radius: 50%;
+    border: 6px solid #1e293b;
+    /* Cria uma "borda vazada" na capa usando a mesma cor do fundo */
     object-fit: cover;
-    margin-bottom: 1rem;
-    border: 4px solid #182130;
-    /* Borda escura para destacar a foto no fundo vermelho */
+    background-color: #0f172a;
 }
 
-.perfil-nome {
-    margin: 0.5rem 0;
-    color: #182130;
-    /* Texto mais escuro para contrastar bem com o fundo vermelho */
-    font-size: 2em;
+/* TEXTOS E BIO */
+.fb-nome {
+    margin: 0;
+    font-size: 2.2rem;
+    font-weight: 800;
+}
+
+.fb-profissao {
+    margin: 5px 0 20px 0;
+    color: #dc2626;
+    /* Destaca a profissão em vermelho */
+    font-size: 1.1rem;
     font-weight: 600;
 }
 
-.perfil-profissao {
-    color: #182130;
-    margin: 0.5rem 0;
-    font-size: 1.2rem;
-    font-weight: 400;
+.fb-bio {
+    margin: 0 0 20px 0;
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #cbd5e1;
+    max-width: 700px;
+    /* Impede a linha de esticar demais e cansar a visão */
 }
 
-/* Botões Sociais */
-.perfil-links {
-    margin-top: 2rem;
+/* BOTÕES SOCIAIS E DIVISÓRIA */
+.fb-actions-wrapper {
     display: flex;
-    justify-content: center;
-    gap: 1rem;
-    border-top: 4px solid #94a3b8;
-    /* Linha divisória idêntica à dos cards */
-    padding-top: 1.5rem;
+    gap: 15px;
+    border-top: 1px solid #334155;
+    /* Aquela linhazinha clássica dividindo as áreas */
+    padding-top: 25px;
 }
 
-.btn-social {
-    display: inline-flex;
+.fb-btn {
+    display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1.2rem;
-    background-color: #182130;
-    /* Fundo escuro acompanhando o tema */
-    color: #94a3b8;
+    gap: 10px;
+    padding: 10px 20px;
+    background-color: #334155;
+    color: #f8fafc;
     text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    border: 2px solid #182130;
-    transition: all 0.3s ease;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: background-color 0.2s;
 }
 
-.btn-social:hover {
-    background-color: #94a3b8;
-    color: #182130;
-    border-color: #94a3b8;
+.fb-btn:hover {
+    background-color: #475569;
 }
 
-/* Mensagem de erro caso o ID do usuário não exista */
-.error-msg {
-    color: #dc2626;
-    font-size: 2rem;
-    margin-bottom: 2rem;
+.fb-btn.twitter {
+    background-color: #1da1f2;
 }
 
-.btn-voltar-erro {
-    display: inline-block;
-    padding: 0.8rem 1.5rem;
-    background-color: #1e293b;
-    color: #94a3b8;
-    text-decoration: none;
-    border: 2px solid #94a3b8;
-    border-radius: 5px;
-    font-weight: bold;
+.fb-btn.twitter:hover {
+    background-color: #1a91da;
 }

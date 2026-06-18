@@ -1,93 +1,115 @@
 import { bd } from "../../home_page/model/bd.js";
 
 export function createProfilePage() {
-    // PEGA A SEÇÃO ONDE O PERFIL SERÁ DESENHADO
     const profile_sec = document.getElementById('profile-sec');
-
-    // PEGA O ID DA URL
     const urlParams = new URLSearchParams(window.location.search);
     const userId = urlParams.get('id');
-
-    // BUSCA O USUÁRIO CERTO NO BANCO
     const usuario = bd[userId];
 
     if (!usuario) {
-        profile_sec.innerHTML = '<h1 class="error-msg">Usuário não encontrado</h1><a class="btn-voltar-erro" href="../home_page/view/home_page.html">Voltar</a>';
+        profile_sec.innerHTML = '<h1 class="error-msg">Usuário não encontrado</h1><button class="btn-voltar-home" onclick="window.location.href=\'../home_page/view/home_page.html\'">Voltar</button>';
         return;
     }
 
-    // LIMPA A SEÇÃO PARA GARANTIR QUE ESTÁ VAZIA
     profile_sec.innerHTML = '';
 
-    // Header
+    // ==========================================
+    // 1. HEADER GLOBAL
+    // ==========================================
     const header = document.createElement('header');
     header.className = 'perfil-header';
 
     const logo = document.createElement('div');
     logo.className = 'perfil-logo';
-    logo.textContent = 'Perfil';
+    logo.innerHTML = '<i class="fa-solid fa-earth-europe"></i> RedeTech'; // Um logo legal
 
     const btnHome = document.createElement('button');
     btnHome.className = 'btn-voltar-home';
     btnHome.textContent = 'Voltar para Home';
-    btnHome.onclick = () => {
-        window.location.href = '../home_page/view/home_page.html';
-    };
+    btnHome.onclick = () => { window.location.href = '../home_page/view/home_page.html'; };
 
     header.appendChild(logo);
     header.appendChild(btnHome);
-
-    // Adicionamos o header antes da seção do perfil, direto no body
     document.body.insertBefore(header, profile_sec);
 
-    // Container do perfil
+    // ==========================================
+    // 2. ESTRUTURA DO PERFIL (ESTILO FACEBOOK)
+    // ==========================================
     const container = document.createElement('div');
-    container.className = 'perfil-container';
+    container.className = 'fb-perfil-container';
 
-    // Avatar
+    // A) Foto de Capa (Colocamos uma imagem genérica bonita de tecnologia)
+    const cover = document.createElement('div');
+    cover.className = 'fb-cover-photo';
+    cover.style.backgroundImage = "url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?w=1200&q=80')";
+
+    // B) Caixa de Informações Branca/Escura (Fica embaixo da capa)
+    const infoSection = document.createElement('div');
+    infoSection.className = 'fb-info-section';
+
+    // C) O invólucro da Foto (para fazê-la sobrepor a capa)
+    const avatarWrapper = document.createElement('div');
+    avatarWrapper.className = 'fb-avatar-wrapper';
+
     const avatar = document.createElement('img');
-    avatar.className = 'perfil-avatar';
+    avatar.className = 'fb-avatar';
     avatar.src = usuario.img_profile;
+    avatarWrapper.appendChild(avatar);
 
-    // Nome
+    // D) Textos (Nome, Profissão e Bio)
+    const textWrapper = document.createElement('div');
+    textWrapper.className = 'fb-text-wrapper';
+
     const nome = document.createElement('h1');
-    nome.className = 'perfil-nome';
+    nome.className = 'fb-nome';
     nome.textContent = usuario.nome;
 
-    // Profissão
     const profissao = document.createElement('p');
-    profissao.className = 'perfil-profissao';
+    profissao.className = 'fb-profissao';
     profissao.textContent = usuario.profissao;
 
-    // Container de Links
-    const linksDiv = document.createElement('div');
-    linksDiv.className = 'perfil-links';
+    textWrapper.appendChild(nome);
+    textWrapper.appendChild(profissao);
+
+    if (usuario.bio) {
+        const bio = document.createElement('p');
+        bio.className = 'fb-bio';
+        bio.textContent = usuario.bio;
+        textWrapper.appendChild(bio);
+    }
+
+    // E) Botões Sociais
+    const actionsWrapper = document.createElement('div');
+    actionsWrapper.className = 'fb-actions-wrapper';
 
     if (usuario.link_twitter) {
         const twitter = document.createElement('a');
-        twitter.className = 'btn-social twitter';
+        twitter.className = 'fb-btn twitter';
         twitter.href = usuario.link_twitter;
         twitter.target = '_blank';
         twitter.innerHTML = '<i class="fa-brands fa-twitter"></i> Twitter';
-        linksDiv.appendChild(twitter);
+        actionsWrapper.appendChild(twitter);
     }
 
     if (usuario.link_github) {
         const github = document.createElement('a');
-        github.className = 'btn-social github';
+        github.className = 'fb-btn github';
         github.href = usuario.link_github;
         github.target = '_blank';
         github.innerHTML = '<i class="fa-brands fa-github"></i> GitHub';
-        linksDiv.appendChild(github);
+        actionsWrapper.appendChild(github);
     }
 
-    // Adiciona tudo no container
-    container.appendChild(avatar);
-    container.appendChild(nome);
-    container.appendChild(profissao);
-    container.appendChild(linksDiv);
+    // ==========================================
+    // 3. MONTANDO AS PEÇAS
+    // ==========================================
+    infoSection.appendChild(avatarWrapper);
+    infoSection.appendChild(textWrapper);
+    infoSection.appendChild(actionsWrapper);
 
-    // Adiciona o container na seção principal
+    container.appendChild(cover);
+    container.appendChild(infoSection);
+
     profile_sec.appendChild(container);
 }
 
