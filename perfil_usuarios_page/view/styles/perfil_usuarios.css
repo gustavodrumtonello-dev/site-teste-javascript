@@ -1,159 +1,362 @@
-/* RESET DA PÁGINA */
-body {
-    font-family: 'Segoe UI', Roboto, Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #0f172a;
-    /* Um fundo escuro bem elegante */
-    color: #f8fafc;
-    padding-top: 10vh;
-    /* Dá espaço para o header não cobrir a capa! */
-}
+@import url('../../../global.css');
+@import url('./header_perfil.css');
+@import url('./capa_perfil.css');
 
-/* 1. HEADER GLOBAL */
-.perfil-header {
-    background-color: #1e293b;
-    padding: 2vh 5vw;
+
+/* ============================================
+   2. LAYOUT PRINCIPAL (SIDEBAR + CONTEÚDO)
+   ============================================ */
+.perfil-layout {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 1000;
-    box-sizing: border-box;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    padding-top: 60px;
+    /* Compensa o header fixo */
 }
 
-.perfil-logo {
-    font-size: 1.5rem;
-    font-weight: bold;
-    color: #dc2626;
-    /* Nosso vermelho principal */
+
+/* ============================================
+   4. CONTEÚDO PRINCIPAL
+   ============================================ */
+.perfil-content {
+    flex: 1;
+    min-height: calc(100vh - 60px);
 }
 
-.btn-voltar-home {
-    padding: 8px 16px;
-    background-color: transparent;
-    color: #94a3b8;
-    border: 1px solid #94a3b8;
-    border-radius: 6px;
-    cursor: pointer;
-    font-weight: 600;
-    transition: all 0.2s;
-}
+/* ============================================
+   5. SEÇÃO DA CAPA (COVER)
+   ============================================ */
 
-.btn-voltar-home:hover {
-    background-color: #94a3b8;
-    color: #0f172a;
-}
-
-/* 2. O CORPO DO PERFIL */
-#profile-sec {
-    width: 100%;
-    display: flex;
-    justify-content: center;
-}
-
-.fb-perfil-container {
-    width: 100%;
+/* ============================================
+   6. LAYOUT DE 3 COLUNAS
+   ============================================ */
+.perfil-columns {
+    display: grid;
+    grid-template-columns: 300px 1fr 280px;
+    gap: 20px;
     max-width: 1100px;
-    /* Tamanho exato do layout de PCs do Facebook/X */
-    background-color: #1e293b;
-    /* A cor do "quadro" principal */
-    border-radius: 0 0 12px 12px;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
-    overflow: hidden;
-    margin-bottom: 50px;
+    margin: 20px auto;
+    padding: 0 20px;
 }
 
-/* A FOTO DE CAPA */
-.fb-cover-photo {
-    width: 100%;
-    height: 350px;
-    background-size: cover;
-    background-position: center;
+/* ============================================
+   7. CARDS GENÉRICOS
+   ============================================ */
+.perfil-card {
+    background-color: var(--bg-card);
+    border-radius: 12px;
+    padding: 20px;
+    margin-bottom: 16px;
+    border: 1px solid var(--border-subtle);
+    transition: border-color 0.3s;
 }
 
-/* CAIXA COM AS INFOS DEBAIXO DA CAPA */
-.fb-info-section {
-    padding: 0 40px 40px 40px;
+.perfil-card:hover {
+    border-color: rgba(255, 255, 255, 0.15);
+}
+
+.perfil-card-title {
+    font-size: 1.15rem;
+    font-weight: 700;
+    margin-bottom: 14px;
     display: flex;
-    flex-direction: column;
+    align-items: center;
+    gap: 8px;
 }
 
-/* O TRUQUE DE MESTRE DA FOTO SOBREPOSTA! */
-.fb-avatar-wrapper {
-    margin-top: -80px;
-    /* <--- Puxa a foto para CIMA da capa! */
-    margin-bottom: 20px;
+.perfil-card-title i {
+    color: var(--primary);
 }
 
-.fb-avatar {
-    width: 160px;
-    height: 160px;
-    border-radius: 50%;
-    border: 6px solid #1e293b;
-    /* Cria uma "borda vazada" na capa usando a mesma cor do fundo */
-    object-fit: cover;
-    background-color: #0f172a;
-}
-
-/* TEXTOS E BIO */
-.fb-nome {
-    margin: 0;
-    font-size: 2.2rem;
-    font-weight: 800;
-}
-
-.fb-profissao {
-    margin: 5px 0 20px 0;
-    color: #dc2626;
-    /* Destaca a profissão em vermelho */
-    font-size: 1.1rem;
-    font-weight: 600;
-}
-
-.fb-bio {
-    margin: 0 0 20px 0;
-    font-size: 1rem;
+/* ============================================
+   8. CARD "SOBRE MIM"
+   ============================================ */
+.sobre-bio {
+    color: var(--text-muted);
+    font-size: 0.95rem;
     line-height: 1.6;
-    color: #cbd5e1;
-    max-width: 700px;
-    /* Impede a linha de esticar demais e cansar a visão */
+    margin-bottom: 16px;
 }
 
-/* BOTÕES SOCIAIS E DIVISÓRIA */
-.fb-actions-wrapper {
-    display: flex;
-    gap: 15px;
-    border-top: 1px solid #334155;
-    /* Aquela linhazinha clássica dividindo as áreas */
-    padding-top: 25px;
-}
-
-.fb-btn {
+.sobre-detail {
     display: flex;
     align-items: center;
     gap: 10px;
-    padding: 10px 20px;
-    background-color: #334155;
-    color: #f8fafc;
+    padding: 8px 0;
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+.sobre-detail i {
+    color: var(--text-muted);
+    width: 18px;
+    text-align: center;
+}
+
+.sobre-links {
+    margin-top: 12px;
+    padding-top: 12px;
+    border-top: 1px solid var(--border-subtle);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.sobre-link {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--primary);
     text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.2s;
+}
+
+.sobre-link:hover {
+    color: var(--primary-hover);
+}
+
+/* ============================================
+   9. CARD "FOTOS" (Grid de miniaturas)
+   ============================================ */
+.fotos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 6px;
+}
+
+.foto-thumb {
+    width: 100%;
+    aspect-ratio: 1;
     border-radius: 8px;
+    object-fit: cover;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.foto-thumb:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
+}
+
+/* ============================================
+   10. CARD "AMIGOS"
+   ============================================ */
+.amigos-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 10px;
+}
+
+.amigo-item {
+    text-align: center;
+    cursor: pointer;
+}
+
+.amigo-item img {
+    width: 100%;
+    aspect-ratio: 1;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.2s;
+}
+
+.amigo-item img:hover {
+    transform: scale(1.05);
+}
+
+.amigo-item span {
+    display: block;
+    margin-top: 4px;
+    font-size: 0.78rem;
+    color: var(--text-muted);
+}
+
+/* ============================================
+   12. POST NO FEED
+   ============================================ */
+.post-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.post-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.post-author {
+    font-weight: 700;
+    font-size: 0.95rem;
+}
+
+.post-time {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.post-text {
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 12px;
+    color: var(--text-muted);
+}
+
+.post-text .hashtag {
+    color: var(--primary);
+    cursor: pointer;
+}
+
+.post-image {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 12px;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.post-stats {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+    border-bottom: 1px solid var(--border-subtle);
+    margin-bottom: 8px;
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.post-actions-bar {
+    display: flex;
+    justify-content: space-around;
+}
+
+.post-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 16px;
+    border: none;
+    background: none;
+    color: var(--text-muted);
     font-weight: 600;
+    font-size: 0.9rem;
+    cursor: pointer;
+    border-radius: 8px;
     transition: background-color 0.2s;
 }
 
-.fb-btn:hover {
-    background-color: #475569;
+.post-action-btn:hover {
+    background-color: var(--bg-global);
+    color: var(--text-main);
 }
 
-.fb-btn.twitter {
-    background-color: #1da1f2;
+/* ============================================
+   13. COLUNA DIREITA (SUGERIDOS / ANIVERSÁRIOS)
+   ============================================ */
+.sugerido-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
 }
 
-.fb-btn.twitter:hover {
-    background-color: #1a91da;
+.sugerido-icon {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    background-color: var(--primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.sugerido-info strong {
+    font-size: 0.9rem;
+    display: block;
+}
+
+.sugerido-info span {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+}
+
+.aniversario-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    padding: 10px 0;
+}
+
+.aniversario-avatar {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.aniversario-text {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    line-height: 1.4;
+}
+
+.aniversario-text strong {
+    color: var(--text-main);
+}
+
+/* ============================================
+   14. RESPONSIVO (telas menores)
+   ============================================ */
+@media (max-width: 1200px) {
+    .perfil-columns {
+        grid-template-columns: 280px 1fr;
+    }
+
+    .col-direita {
+        display: none;
+    }
+}
+
+@media (max-width: 900px) {
+    .perfil-sidebar {
+        display: none;
+    }
+
+    .perfil-content {
+        margin-left: 0;
+    }
+
+    .perfil-columns {
+        grid-template-columns: 1fr;
+    }
+
+    .cover-info-bar {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        padding: 0 20px;
+    }
+
+    .cover-avatar {
+        width: 120px;
+        height: 120px;
+    }
+
+    .cover-actions {
+        justify-content: center;
+    }
+
+    .cover-nav {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .header-search {
+        display: none;
+    }
 }

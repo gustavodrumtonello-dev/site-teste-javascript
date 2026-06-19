@@ -4,253 +4,467 @@ export const bd = [
         profissao: 'Desenvolvedora Frontend',
         img_profile: 'https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=150',
         link_twitter: 'https://twitter.com/anasilvadev',
-        link_github: 'https://github.com/anasilvadev'
+        link_github: 'https://github.com/anasilvadev',
+        img_cover: 'https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?w=600',
+        bio: 'Apaixonada por criar interfaces incríveis, limpas e totalmente acessíveis.',
+        cidade: 'São Paulo, SP',
+        amigos_count: '1.4k',
+        seguindo_count: '512',
+        fotos_count: '230'
     },
     {
         nome: 'Lucas Santos',
         profissao: 'Engenheiro de Dados',
         img_profile: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=150',
         link_twitter: 'https://twitter.com/lucasdata',
-        link_github: 'https://github.com/lucasdata'
+        link_github: 'https://github.com/lucasdata',
+        img_cover: 'https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?w=600',
+        bio: 'Transformando dados brutos em insights valiosos e arquiteturas escaláveis.',
+        cidade: 'Rio de Janeiro, RJ',
+        amigos_count: '840',
+        seguindo_count: '920',
+        fotos_count: '85'
     },
     {
         nome: 'Beatriz Costa',
         profissao: 'UI/UX Designer',
         img_profile: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=150',
         link_twitter: 'https://twitter.com/biadesign',
-        link_github: 'https://github.com/biadesign'
+        link_github: 'https://github.com/biadesign',
+        img_cover: 'https://images.unsplash.com/photo-1550684848-fac1c5b4e853?w=600',
+        bio: 'Desenhando experiências simples, bonitas e focadas nas necessidades do usuário.',
+        cidade: 'Belo Horizonte, MG',
+        amigos_count: '3.2k',
+        seguindo_count: '812',
+        fotos_count: '1.5k'
     },
     {
         nome: 'Thiago oliveira',
         profissao: 'Desenvolvedor Backend',
         img_profile: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150',
         link_twitter: 'https://twitter.com/thioliveira',
-        link_github: 'https://github.com/thioliveira'
+        link_github: 'https://github.com/thioliveira',
+        img_cover: 'https://images.unsplash.com/photo-1607799279861-4dd421887fb3?w=600',
+        bio: 'Especialista em APIs robustas, microsserviços e segurança de dados.',
+        cidade: 'Curitiba, PR',
+        amigos_count: '950',
+        seguindo_count: '430',
+        fotos_count: '110'
     },
     {
         nome: 'Mariana Souza',
         profissao: 'Gerente de Produto',
         img_profile: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
         link_twitter: 'https://twitter.com/maripm',
-        link_github: 'https://github.com/maripm'
+        link_github: 'https://github.com/maripm',
+        img_cover: 'https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=600',
+        bio: 'Conectando negócios, tecnologia e design para criar produtos de impacto.',
+        cidade: 'Florianópolis, SC',
+        amigos_count: '2.1k',
+        seguindo_count: '1.1k',
+        fotos_count: '420'
     },
     {
-        nome: 'Carlos Dias',
+        nome: 'Goku',
         profissao: 'Desenvolvedor Fullstack',
-        img_profile: 'https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=150',
+        img_profile: 'https://recreio.com.br/wp-content/uploads/2024/05/goku_capa-1.jpg',
         link_twitter: 'https://twitter.com/carlostech',
-        link_github: 'https://github.com/carlosdev'
+        link_github: 'https://github.com/carlosdev',
+        img_cover: 'https://images.unsplash.com/photo-1542831371-29b0f74f9713?w=600',
+        bio: 'Do banco de dados ao CSS, pixel perfeito e código limpo.',
+        cidade: 'Campinas, SP',
+        amigos_count: '1.1k',
+        seguindo_count: '670',
+        fotos_count: '195'
     },
     {
         nome: 'Amanda Silva',
         profissao: 'Frontend Developer',
         img_profile: 'https://i.pravatar.cc/150?img=1',
         link_twitter: 'https://twitter.com/amanda_dev',
-        link_github: 'https://github.com/amandasilva'
+        link_github: 'https://github.com/amandasilva',
+        img_cover: 'https://images.unsplash.com/photo-1620641788421-7a1c342ea42e?w=600',
+        bio: 'Criando soluções dinâmicas com React e Next.js.',
+        cidade: 'Porto Alegre, RS',
+        amigos_count: '1.8k',
+        seguindo_count: '740',
+        fotos_count: '310'
     },
     {
         nome: 'Bruno Souza',
         profissao: 'Backend Developer',
         img_profile: 'https://i.pravatar.cc/150?img=11',
         link_twitter: 'https://twitter.com/bruno_backend',
-        link_github: 'https://github.com/brunosouza'
+        link_github: 'https://github.com/brunosouza',
+        img_cover: 'https://images.unsplash.com/photo-1515879218367-8466d910aaa4?w=600',
+        bio: 'Focado em escalabilidade, arquitetura limpa e bancos de dados relacionais.',
+        cidade: 'Salvador, BA',
+        amigos_count: '620',
+        seguindo_count: '310',
+        fotos_count: '75'
     },
     {
         nome: 'Camila Rocha',
         profissao: 'UX/UI Designer',
         img_profile: 'https://i.pravatar.cc/150?img=5',
         link_twitter: 'https://twitter.com/camila_ux',
-        link_github: 'https://github.com/camilarocha'
+        link_github: 'https://github.com/camilarocha',
+        img_cover: 'https://images.unsplash.com/photo-1513542789411-b6a5d4f31634?w=600',
+        bio: 'Transformando problemas complexos em jornadas simples e encantadoras.',
+        cidade: 'Recife, PE',
+        amigos_count: '2.9k',
+        seguindo_count: '980',
+        fotos_count: '840'
     },
     {
         nome: 'Diego Martins',
         profissao: 'DevOps Engineer',
         img_profile: 'https://i.pravatar.cc/150?img=12',
         link_twitter: 'https://twitter.com/diego_ops',
-        link_github: 'https://github.com/diegomartins'
+        link_github: 'https://github.com/diegomartins',
+        img_cover: 'https://images.unsplash.com/photo-1600132806370-bf17e65e942f?w=600',
+        bio: 'Automação, CI/CD, Kubernetes e infraestrutura como código.',
+        cidade: 'Brasília, DF',
+        amigos_count: '730',
+        seguindo_count: '520',
+        fotos_count: '90'
     },
     {
         nome: 'Eduarda Lima',
         profissao: 'Data Scientist',
         img_profile: 'https://i.pravatar.cc/150?img=9',
         link_twitter: 'https://twitter.com/duda_data',
-        link_github: 'https://github.com/eduardalima'
+        link_github: 'https://github.com/eduardalima',
+        img_cover: 'https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600',
+        bio: 'Encontrando padrões ocultos em dados e criando modelos preditivos inteligentes.',
+        cidade: 'Fortaleza, CE',
+        amigos_count: '1.2k',
+        seguindo_count: '640',
+        fotos_count: '215'
     },
     {
         nome: 'Felipe Gomes',
         profissao: 'Mobile Developer',
         img_profile: 'https://i.pravatar.cc/150?img=13',
         link_twitter: 'https://twitter.com/felipe_mob',
-        link_github: 'https://github.com/felipegomes'
+        link_github: 'https://github.com/felipegomes',
+        img_cover: 'https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?w=600',
+        bio: 'Criando apps nativos e híbridos que rodam perfeitamente na palma da sua mão.',
+        cidade: 'Goiânia, GO',
+        amigos_count: '1.5k',
+        seguindo_count: '880',
+        fotos_count: '340'
     },
     {
         nome: 'Gabriela Costa',
         profissao: 'QA Engineer',
         img_profile: 'https://i.pravatar.cc/150?img=16',
         link_twitter: 'https://twitter.com/gabi_qa',
-        link_github: 'https://github.com/gabrielacosta'
+        link_github: 'https://github.com/gabrielacosta',
+        img_cover: 'https://images.unsplash.com/photo-1516321318423-f06f85e504b3?w=600',
+        bio: 'Caçadora de bugs profissional. Garanto que o software funcione sempre.',
+        cidade: 'Vitória, ES',
+        amigos_count: '920',
+        seguindo_count: '410',
+        fotos_count: '180'
     },
     {
         nome: 'Henrique Alves',
         profissao: 'Software Architect',
         img_profile: 'https://i.pravatar.cc/150?img=14',
         link_twitter: 'https://twitter.com/rick_arch',
-        link_github: 'https://github.com/henriquealves'
+        link_github: 'https://github.com/henriquealves',
+        img_cover: 'https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?w=600',
+        bio: 'Desenhando sistemas complexos, sustentáveis e de alta performance.',
+        cidade: 'Manaus, AM',
+        amigos_count: '2.5k',
+        seguindo_count: '1.2k',
+        fotos_count: '510'
     },
     {
         nome: 'Isabela Mendes',
         profissao: 'Scrum Master',
         img_profile: 'https://i.pravatar.cc/150?img=20',
         link_twitter: 'https://twitter.com/isa_scrum',
-        link_github: 'https://github.com/isabelamendes'
+        link_github: 'https://github.com/isabelamendes',
+        img_cover: 'https://images.unsplash.com/photo-1531538606174-0f90ff5dce83?w=600',
+        bio: 'Removendo impedimentos e ajudando times a alcançarem a agilidade máxima.',
+        cidade: 'Natal, RN',
+        amigos_count: '1.7k',
+        seguindo_count: '940',
+        fotos_count: '290'
     },
     {
         nome: 'João Pedro',
         profissao: 'Fullstack Developer',
         img_profile: 'https://i.pravatar.cc/150?img=15',
         link_twitter: 'https://twitter.com/jp_dev',
-        link_github: 'https://github.com/joaopedro'
+        link_github: 'https://github.com/joaopedro',
+        img_cover: 'https://images.unsplash.com/photo-1555066931-4365d14bab8c?w=600',
+        bio: 'Node.js no backend, Vue no frontend. Focado em MVPs ágeis.',
+        cidade: 'Santos, SP',
+        amigos_count: '1.3k',
+        seguindo_count: '590',
+        fotos_count: '160'
     },
     {
         nome: 'Karina Lopes',
         profissao: 'Product Manager',
         img_profile: 'https://i.pravatar.cc/150?img=22',
         link_twitter: 'https://twitter.com/kah_pm',
-        link_github: 'https://github.com/karinalopes'
+        link_github: 'https://github.com/karinalopes',
+        img_cover: 'https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=600',
+        bio: 'Definindo a visão do produto e liderando squads rumo ao sucesso.',
+        cidade: 'Belém, PA',
+        amigos_count: '2.2k',
+        seguindo_count: '1.4k',
+        fotos_count: '480'
     },
     {
         nome: 'Lucas Moraes',
         profissao: 'Cyber Security',
         img_profile: 'https://i.pravatar.cc/150?img=33',
         link_twitter: 'https://twitter.com/lucas_sec',
-        link_github: 'https://github.com/lucasmoraes'
+        link_github: 'https://github.com/lucasmoraes',
+        img_cover: 'https://images.unsplash.com/photo-1563986768609-322da13575f3?w=600',
+        bio: 'Protegendo perímetros, analisando vulnerabilidades e mitigando riscos.',
+        cidade: 'João Pessoa, PB',
+        amigos_count: '790',
+        seguindo_count: '460',
+        fotos_count: '95'
     },
     {
         nome: 'Mariana Ribeiro',
         profissao: 'Tech Lead',
         img_profile: 'https://i.pravatar.cc/150?img=24',
         link_twitter: 'https://twitter.com/mari_lead',
-        link_github: 'https://github.com/marianaribeiro'
+        link_github: 'https://github.com/marianaribeiro',
+        img_cover: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?w=600',
+        bio: 'Liderando desenvolvedores seniores e garantindo excelência técnica.',
+        cidade: 'São José dos Campos, SP',
+        amigos_count: '2.8k',
+        seguindo_count: '1.6k',
+        fotos_count: '670'
     },
     {
         nome: 'Nicolas Castro',
         profissao: 'Frontend Developer',
         img_profile: 'https://i.pravatar.cc/150?img=53',
         link_twitter: 'https://twitter.com/nick_front',
-        link_github: 'https://github.com/nicolascastro'
+        link_github: 'https://github.com/nicolascastro',
+        img_cover: 'https://images.unsplash.com/photo-1507238691740-187a5b1d37b8?w=600',
+        bio: 'Entusiasta de CSS moderno, animações fluidas e micro-interações.',
+        cidade: 'Niterói, RJ',
+        amigos_count: '1.1k',
+        seguindo_count: '530',
+        fotos_count: '210'
     },
     {
         nome: 'Olívia Freitas',
         profissao: 'Machine Learning Eng.',
         img_profile: 'https://i.pravatar.cc/150?img=26',
         link_twitter: 'https://twitter.com/olivia_ml',
-        link_github: 'https://github.com/oliviafreitas'
+        link_github: 'https://github.com/oliviafreitas',
+        img_cover: 'https://images.unsplash.com/photo-1614741118887-7a4ee193a5fa?w=600',
+        bio: 'Treinando redes neurais profundas para resolver desafios reais de IA.',
+        cidade: 'Ribeirão Preto, SP',
+        amigos_count: '1.4k',
+        seguindo_count: '780',
+        fotos_count: '190'
     },
     {
         nome: 'Paulo Santos',
         profissao: 'Cloud Architect',
         img_profile: 'https://i.pravatar.cc/150?img=59',
         link_twitter: 'https://twitter.com/paulo_cloud',
-        link_github: 'https://github.com/paulosantos'
+        link_github: 'https://github.com/paulosantos',
+        img_cover: 'https://images.unsplash.com/photo-1544197150-b99a580bb7a8?w=600',
+        bio: 'Especialista multicloud focado em alta disponibilidade e economia de custos.',
+        cidade: 'São Luís, MA',
+        amigos_count: '1.6k',
+        seguindo_count: '820',
+        fotos_count: '240'
     },
     {
         nome: 'Raquel Nunes',
         profissao: 'UX/UI Designer',
         img_profile: 'https://i.pravatar.cc/150?img=28',
         link_twitter: 'https://twitter.com/kel_design',
-        link_github: 'https://github.com/raquelnunes'
+        link_github: 'https://github.com/raquelnunes',
+        img_cover: 'https://images.unsplash.com/photo-1581291518655-9523c932dedf?w=600',
+        bio: 'Criando protótipos de alta fidelidade e conduzindo testes com usuários.',
+        cidade: 'Aracaju, SE',
+        amigos_count: '2.4k',
+        seguindo_count: '710',
+        fotos_count: '620'
     },
     {
         nome: 'Samuel Pinto',
         profissao: 'Data Analyst',
         img_profile: 'https://i.pravatar.cc/150?img=60',
         link_twitter: 'https://twitter.com/samuel_data',
-        link_github: 'https://github.com/samuelpinto'
+        link_github: 'https://github.com/samuelpinto',
+        img_cover: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600',
+        bio: 'Contando histórias através de dados utilizando SQL e dashboards intuitivos.',
+        cidade: 'Teresina, PI',
+        amigos_count: '980',
+        seguindo_count: '490',
+        fotos_count: '130'
     },
     {
         nome: 'Tatiane Farias',
         profissao: 'Agile Coach',
         img_profile: 'https://i.pravatar.cc/150?img=30',
         link_twitter: 'https://twitter.com/tati_agile',
-        link_github: 'https://github.com/tatianefarias'
+        link_github: 'https://github.com/tatianefarias',
+        img_cover: 'https://images.unsplash.com/photo-1552664730-d307ca884978?w=600',
+        bio: 'Transformando a cultura organizacional através de mentalidade ágil.',
+        cidade: 'Maceió, AL',
+        amigos_count: '1.9k',
+        seguindo_count: '1.1k',
+        fotos_count: '380'
     },
     {
         nome: 'Vinícius Dias',
         profissao: 'SRE',
         img_profile: 'https://i.pravatar.cc/150?img=61',
         link_twitter: 'https://twitter.com/vini_sre',
-        link_github: 'https://github.com/viniciusdias'
+        link_github: 'https://github.com/viniciusdias',
+        img_cover: 'https://images.unsplash.com/photo-1451187580459-43490279c0fa?w=600',
+        bio: 'Garantindo a estabilidade e monitoramento de sistemas em larga escala.',
+        cidade: 'Cuiabá, MT',
+        amigos_count: '880',
+        seguindo_count: '590',
+        fotos_count: '115'
     },
     {
         nome: 'Aline Moura',
         profissao: 'React Developer',
         img_profile: 'https://i.pravatar.cc/150?img=32',
         link_twitter: 'https://twitter.com/aline_react',
-        link_github: 'https://github.com/alinemoura'
+        link_github: 'https://github.com/alinemoura',
+        img_cover: 'https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=600',
+        bio: 'Componentizando o mundo e otimizando a performance na web.',
+        cidade: 'Uberlândia, MG',
+        amigos_count: '1.5k',
+        seguindo_count: '680',
+        fotos_count: '245'
     },
     {
         nome: 'Breno Carvalho',
         profissao: 'Python Developer',
         img_profile: 'https://i.pravatar.cc/150?img=63',
         link_twitter: 'https://twitter.com/breno_py',
-        link_github: 'https://github.com/brenocarvalho'
+        link_github: 'https://github.com/brenocarvalho',
+        img_cover: 'https://images.unsplash.com/photo-1526379095098-d400fd0bf935?w=600',
+        bio: 'Fascinado por automação de scripts, Django e raspagem de dados.',
+        cidade: 'Campo Grande, MS',
+        amigos_count: '720',
+        seguindo_count: '390',
+        fotos_count: '80'
     },
     {
         nome: 'Carolina Pires',
         profissao: 'System Administrator',
         img_profile: 'https://i.pravatar.cc/150?img=34',
         link_twitter: 'https://twitter.com/carol_sys',
-        link_github: 'https://github.com/carolinapires'
+        link_github: 'https://github.com/carolinapires',
+        img_cover: 'https://images.unsplash.com/photo-1601597111158-2fceff292cdc?w=600',
+        bio: 'Dominando Linux, servidores locais e segurança de redes corporativas.',
+        cidade: 'Londrina, PR',
+        amigos_count: '1.0k',
+        seguindo_count: '460',
+        fotos_count: '140'
     },
     {
         nome: 'Danilo Silva',
         profissao: 'Game Developer',
         img_profile: 'https://i.pravatar.cc/150?img=65',
         link_twitter: 'https://twitter.com/danilo_game',
-        link_github: 'https://github.com/danilosilva'
+        link_github: 'https://github.com/danilosilva',
+        img_cover: 'https://images.unsplash.com/photo-1538481199705-c710c4e965fc?w=600',
+        bio: 'Transformando mecânicas divertidas e roteiros criativos em jogos com Unity.',
+        cidade: 'Sorocaba, SP',
+        amigos_count: '2.0k',
+        seguindo_count: '830',
+        fotos_count: '430'
     },
     {
         nome: 'Eliane Barros',
         profissao: 'Database Admin',
         img_profile: 'https://i.pravatar.cc/150?img=36',
         link_twitter: 'https://twitter.com/eli_dba',
-        link_github: 'https://github.com/elianebarros'
+        link_github: 'https://github.com/elianebarros',
+        img_cover: 'https://images.unsplash.com/photo-1544383835-bda2bc66a55d?w=600',
+        bio: 'Garantindo integridade, backups e queries rápidas em PostgreSQL e Oracle.',
+        cidade: 'Vila Velha, ES',
+        amigos_count: '810',
+        seguindo_count: '340',
+        fotos_count: '95'
     },
     {
         nome: 'Fernando Melo',
         profissao: 'SEO Specialist',
         img_profile: 'https://i.pravatar.cc/150?img=67',
         link_twitter: 'https://twitter.com/nando_seo',
-        link_github: 'https://github.com/fernandomelo'
+        link_github: 'https://github.com/fernandomelo',
+        img_cover: 'https://images.unsplash.com/photo-1432821596592-e2c18b78144f?w=600',
+        bio: 'Colocando sites na primeira página dos motores de busca de forma orgânica.',
+        cidade: 'Juiz de Fora, MG',
+        amigos_count: '1.4k',
+        seguindo_count: '910',
+        fotos_count: '310'
     },
     {
         nome: 'Gisele Viana',
         profissao: 'Marketing Tech',
         img_profile: 'https://i.pravatar.cc/150?img=38',
         link_twitter: 'https://twitter.com/gigi_mkt',
-        link_github: 'https://github.com/giseleviana'
+        link_github: 'https://github.com/giseleviana',
+        img_cover: 'https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600',
+        bio: 'Integrando ferramentas de automação para otimizar campanhas de marketing.',
+        cidade: 'Feira de Santana, BA',
+        amigos_count: '2.6k',
+        seguindo_count: '1.2k',
+        fotos_count: '590'
     },
     {
         nome: 'Hugo Nogueira',
         profissao: 'Blockchain Dev',
         img_profile: 'https://i.pravatar.cc/150?img=68',
         link_twitter: 'https://twitter.com/hugo_block',
-        link_github: 'https://github.com/hugonogueira'
+        link_github: 'https://github.com/hugonogueira',
+        img_cover: 'https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600',
+        bio: 'Escrevendo contratos inteligentes seguros em Solidity e ecossistemas Web3.',
+        cidade: 'Porto Velho, RO',
+        amigos_count: '940',
+        seguindo_count: '610',
+        fotos_count: '120'
     },
     {
         nome: 'Igor Rocha',
         profissao: 'Vue.js Developer',
         img_profile: 'https://i.pravatar.cc/150?img=70',
         link_twitter: 'https://twitter.com/igor_vue',
-        link_github: 'https://github.com/igorrocha'
+        link_github: 'https://github.com/igorrocha',
+        img_cover: 'https://images.unsplash.com/photo-1531403009284-440f080d1e12?w=600',
+        bio: 'Fã de reatividade, ecossistema Vuex/Pinia e interfaces elegantes.',
+        cidade: 'Anápolis, GO',
+        amigos_count: '1.1k',
+        seguindo_count: '470',
+        fotos_count: '175'
     },
     {
         nome: 'Jéssica Castro',
         profissao: 'Angular Developer',
         img_profile: 'https://i.pravatar.cc/150?img=40',
         link_twitter: 'https://twitter.com/jeh_angular',
-        link_github: 'https://github.com/jessicacastro'
+        link_github: 'https://github.com/jessicacastro',
+        img_cover: 'https://images.unsplash.com/photo-1517694712202-14dd9538aa97?w=600',
+        bio: 'Desenvolvendo aplicações robustas de nível empresarial usando TypeScript.',
+        cidade: 'Caxias do Sul, RS',
+        amigos_count: '1.3k',
+        seguindo_count: '540',
+        fotos_count: '220'
     }
-
-
 ];

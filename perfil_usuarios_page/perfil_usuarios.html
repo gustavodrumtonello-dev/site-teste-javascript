@@ -13,8 +13,140 @@
 </head>
 
 <body>
-    <section id="profile-sec">
-    </section>
+    <header class="perfil-header">
+        <div class="header-logo">
+            <i class="fa-solid fa-earth-europe"></i> RedeTech
+        </div>
+        <div class="header-search">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" placeholder="Buscar no RedeTech...">
+        </div>
+        <div class="header-nav-icons">
+            <button class="header-icon-btn" title="Home"
+                onclick="window.location.href='../home_page/view/home_page.html'">
+                <i class="fa-solid fa-house"></i>
+            </button>
+            <button class="header-icon-btn" title="Amigos">
+                <i class="fa-solid fa-user-group"></i>
+            </button>
+            <button class="header-icon-btn" title="Mensagens">
+                <i class="fa-solid fa-message"></i>
+            </button>
+            <button class="header-icon-btn" title="Notificações">
+                <i class="fa-solid fa-bell"></i>
+            </button>
+        </div>
+    </header>
+
+    <main class="perfil-layout">
+        <div class="perfil-content">
+            <section class="cover-section">
+                <div id="cover-photo" class="cover-photo"></div>
+                <div class="cover-info-bar">
+                    <img id="cover-avatar" class="cover-avatar" src="" alt="">
+                    <div class="cover-user-info">
+                        <h1 id="cover-user-name" class="cover-user-name"></h1>
+                        <div class="cover-user-stats">
+                            <span id="stat-amigos"></span>
+                            <span id="stat-seguindo"></span>
+                            <span id="stat-fotos"></span>
+                        </div>
+                    </div>
+                    <div class="cover-actions">
+                        <button class="btn-action btn-add-friend"><i class="fa-solid fa-user-plus"></i> Adicionar
+                            Amigo</button>
+                        <button class="btn-action btn-message"><i class="fa-solid fa-comment"></i> Enviar
+                            Mensagem</button>
+                        <button class="btn-action btn-more"><i class="fa-solid fa-ellipsis"></i></button>
+                    </div>
+                </div>
+                <div class="cover-nav">
+                    <span class="cover-nav-item active">Publicações</span>
+                </div>
+            </section>
+
+            <div class="perfil-columns">
+                <!-- Coluna Esquerda -->
+                <div class="col-esquerda">
+                    <div class="perfil-card">
+                        <div class="perfil-card-title"><i class="fa-solid fa-address-card"></i> Sobre Mim</div>
+                        <p id="sobre-bio" class="sobre-bio"></p>
+                        <div class="sobre-detail"><i class="fa-solid fa-briefcase"></i> <span id="sobre-prof"></span>
+                        </div>
+                        <div class="sobre-detail"><i class="fa-solid fa-location-dot"></i> <span
+                                id="sobre-cidade"></span></div>
+                        <div id="sobre-links" class="sobre-links"></div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-card-title"><i class="fa-solid fa-images"></i> Fotos</div>
+                        <div id="fotos-grid" class="fotos-grid"></div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-card-title"><i class="fa-solid fa-user-group"></i> Amigos</div>
+                        <div id="amigos-grid" class="amigos-grid"></div>
+                    </div>
+                </div>
+
+                <!-- Coluna Central -->
+                <div class="col-centro">
+                    <div class="perfil-card">
+                        <div class="post-header">
+                            <img id="post-avatar" class="post-avatar" src="" alt="">
+                            <div>
+                                <div id="post-author" class="post-author"></div>
+                                <div class="post-time">3h · <i class="fa-solid fa-earth-americas"
+                                        style="font-size:0.7rem"></i></div>
+                            </div>
+                        </div>
+                        <p class="post-text">
+                            Dia incrível! Trabalhando em novos projetos e aprendendo coisas novas todos os dias. 🚀💻
+                            <span class="hashtag">#Tecnologia</span> <span class="hashtag">#Desenvolvimento</span> <span
+                                class="hashtag">#Carreira</span>
+                        </p>
+                        <img id="post-image" class="post-image" src="" alt="">
+                        <div class="post-stats">
+                            <span>👍 215 curtidas</span>
+                            <span>38 Comentários · 15 Shares</span>
+                        </div>
+                        <div class="post-actions-bar">
+                            <button class="post-action-btn"><i class="fa-regular fa-thumbs-up"></i> Curtir</button>
+                            <button class="post-action-btn"><i class="fa-regular fa-comment"></i> Comentar</button>
+                            <button class="post-action-btn"><i class="fa-solid fa-share"></i> Compartilhar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna Direita -->
+                <div class="col-direita">
+                    <div class="perfil-card">
+                        <div class="perfil-card-title"><i class="fa-solid fa-thumbs-up"></i> Páginas Sugeridas</div>
+                        <div class="sugerido-item">
+                            <div class="sugerido-icon"><i class="fa-solid fa-code"></i></div>
+                            <div class="sugerido-info">
+                                <strong>Dev Community</strong>
+                                <span>12k membros</span>
+                            </div>
+                        </div>
+                        <div class="sugerido-item">
+                            <div class="sugerido-icon" style="background-color: #3b82f6;"><i
+                                    class="fa-solid fa-laptop-code"></i></div>
+                            <div class="sugerido-info">
+                                <strong>Tech News</strong>
+                                <span>8.5k membros</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="perfil-card">
+                        <div class="perfil-card-title"><i class="fa-solid fa-cake-candles"></i> Aniversários</div>
+                        <div id="aniversario-container"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
 </body>
 
 </html>
