@@ -1,66 +1,21 @@
-import { bd } from "../model/bd.js";
+import { get_usuarios } from "../service/usuarios_service.js";
+import { renderCardCriar } from "../view/components/card_criar.js";
+import { abrirModalCriar } from "../view/components/modal_create.js";
 
+// arquivos dos modais
+import { renderCard } from "../view/components/cards_view.js";
+import { abrirModal } from "../view/components/modal_update.js";
+import { abrirModalExcluir } from "../view/components/modal_delete.js";
 
-export function createCards(cards_sec) {
-    bd.map((dado_cartao, index) => {
-        const div_card = document.createElement('div');
-        div_card.className = 'card'
+export async function createCards(cards_sec) {
+    cards_sec.innerHTML = '';
 
-        const div_card_client = document.createElement('div');
-        div_card_client.className = 'card-client';
+    const usuarios = await get_usuarios();
 
-        const userPicture = document.createElement('div');
-        userPicture.className = 'user-picture';
-
-        const img = document.createElement('img');
-        img.src = dado_cartao.img_profile;
-        userPicture.appendChild(img);
-
-        const profClient = document.createElement('p');
-        profClient.className = 'prof-client';
-        profClient.textContent = dado_cartao.profissao;
-
-        const nameClient = document.createElement('p');
-        nameClient.className = 'name-client';
-        nameClient.textContent = dado_cartao.nome;
-
-        const socialMedia = document.createElement('div');
-        socialMedia.className = 'social-media';
-
-        const twitterLink = document.createElement('a');
-        twitterLink.href = dado_cartao.link_twitter;
-        const twitterIcon = document.createElement('i');
-        twitterIcon.className = 'fa-brands fa-twitter';
-        twitterLink.appendChild(twitterIcon);
-
-
-
-        const githubLink = document.createElement('a');
-        githubLink.href = dado_cartao.link_github;
-        const githubIcon = document.createElement('i');
-        githubIcon.className = 'fa-brands fa-github';
-        githubLink.appendChild(githubIcon);
-
-        socialMedia.appendChild(twitterLink);
-        socialMedia.appendChild(githubLink);
-
-        const btnPerfil = document.createElement('button');
-        btnPerfil.className = 'btn-perfil';
-        btnPerfil.textContent = 'Ver Perfil';
-
-        // Adiciona evento de clique para redirecionar para o perfil
-        btnPerfil.addEventListener('click', () => {
-            window.location.href = `../../perfil_usuarios_page/perfil_usuarios.html?id=${index}`;
-        });
-
-        div_card_client.appendChild(userPicture);
-        div_card_client.appendChild(nameClient);
-        div_card_client.appendChild(profClient);
-        div_card_client.appendChild(socialMedia);
-        div_card_client.appendChild(btnPerfil);
-
-        div_card.appendChild(div_card_client);
-
-        cards_sec.appendChild(div_card);
+    usuarios.map((dado_cartao) => {
+        const cardElement = renderCard(dado_cartao, abrirModal, abrirModalExcluir);
+        cards_sec.appendChild(cardElement);
     });
+
+    cards_sec.appendChild(renderCardCriar(abrirModalCriar));
 }

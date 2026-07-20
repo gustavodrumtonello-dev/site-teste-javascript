@@ -1,16 +1,16 @@
-// Este arquivo roda após o DOM carregar e orquestra a inicialização dos outros arquivos
+import { mostrarTelaLogin, inicializarMascaraSenhaLogin } from '../view/components/login_view.js';
+import { mostrarTelaCadastro, inicializarMascaraSenhaCadastro } from '../view/components/cadastro_view.js';
+import { fazerLogin } from './login.js';
+import { fazerCadastro } from './cadastro.js';
+
+// Colocando as funções no escopo global para o HTML ter acesso
+window.mostrarTelaLogin = mostrarTelaLogin;
+window.mostrarTelaCadastro = mostrarTelaCadastro;
+window.fazerLogin = fazerLogin;
+window.fazerCadastro = fazerCadastro;
+
+// Rodamos apenas a configuração das máscaras de senha no carregamento do DOM
 document.addEventListener('DOMContentLoaded', () => {
-    
-    // Captura as seções principais da tela
-    const secaoLogin = document.querySelector('.div_Login');
-    const secaoCadastro = document.querySelector('.div_Cadastro');
-    
-    // Inicializa a função global/compartilhada do shared.js
-    inicializarMascaraSenha();
-    
-    // Inicializa o módulo de login passando as dependências necessárias
-    inicializarLogin(secaoLogin, secaoCadastro);
-    
-    // Inicializa o módulo de cadastro passando as dependências necessárias
-    inicializarCadastro(secaoLogin, secaoCadastro);
+    inicializarMascaraSenhaLogin();
+    inicializarMascaraSenhaCadastro();
 });

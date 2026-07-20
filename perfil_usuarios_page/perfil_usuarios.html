@@ -57,6 +57,8 @@
                             Amigo</button>
                         <button class="btn-action btn-message"><i class="fa-solid fa-comment"></i> Enviar
                             Mensagem</button>
+                        <button id="btn-editar-perfil" class="btn-action btn-editar-perfil"><i
+                                class="fa-solid fa-pen-to-square"></i> Editar Perfil</button>
                         <button class="btn-action btn-more"><i class="fa-solid fa-ellipsis"></i></button>
                     </div>
                 </div>
@@ -146,6 +148,51 @@
                 </div>
             </div>
         </div>
+        <!-- MODAL DE EDIÇÃO DO PERFIL -->
+        <div id="modal-editar-perfil" class="modal-overlay-perfil">
+            <div class="modal-container-perfil">
+                <h2 class="modal-titulo-perfil">Editar Perfil</h2>
+
+                <input type="hidden" id="perfil-input-id">
+
+                <form class="modal-form-perfil">
+                    <div class="form-group-perfil">
+                        <label for="perfil-input-nome">Nome de usuário</label>
+                        <input type="text" id="perfil-input-nome">
+                    </div>
+                    <div class="form-group-perfil">
+                        <label for="perfil-input-profissao">Profissão</label>
+                        <input type="text" id="perfil-input-profissao">
+                    </div>
+                    <div class="form-group-perfil">
+                        <label for="perfil-input-cidade">Cidade</label>
+                        <input type="text" id="perfil-input-cidade">
+                    </div>
+                    <div class="form-group-perfil">
+                        <label for="perfil-input-bio">Bio</label>
+                        <textarea id="perfil-input-bio"></textarea>
+                    </div>
+                    <div class="form-group-perfil">
+                        <label for="perfil-input-img">URL da foto de perfil</label>
+                        <input type="text" id="perfil-input-img">
+                    </div>
+                    <div class="form-group-perfil">
+                        <label for="perfil-input-twitter">Link do Twitter</label>
+                        <input type="text" id="perfil-input-twitter">
+                    </div>
+                    <div class="form-group-perfil">
+                        <label for="perfil-input-github">Link do GitHub</label>
+                        <input type="text" id="perfil-input-github">
+                    </div>
+                </form>
+
+                <div class="modal-acoes-perfil">
+                    <button id="btn-fechar-modal-perfil" class="btn-cancelar-perfil">Cancelar</button>
+                    <button id="btn-salvar-modal-perfil" class="btn-salvar-perfil">Salvar</button>
+                </div>
+            </div>
+        </div>
+
     </main>
 </body>
 

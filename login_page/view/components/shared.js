@@ -1,4 +1,3 @@
-// Função compartilhada para inicializar o comportamento do olho da senha
 function inicializarMascaraSenha() {
     const togglePasswordButtons = document.querySelectorAll('.toggle-password');
 

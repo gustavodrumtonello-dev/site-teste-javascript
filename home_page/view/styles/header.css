@@ -1,11 +1,21 @@
-.header {
+header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 2vh;
     background-color: #1e293b;
     position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    /* Garante que o header fique na frente de tudo */
+    background-color: var(--bg-card);
+    /* Integrado com a nossa variável */
+    border-bottom: 3px solid var(--primary);
+    background-color: var(--bg-card);
 }
+
 
 .logo {
     display: flex;
