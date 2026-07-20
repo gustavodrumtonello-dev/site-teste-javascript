@@ -23,7 +23,7 @@ export function fazerCadastro() {
     }
 
     // Cadastro simulado com sucesso
-    window.location.href = '../../home_page/view/home_page.html';
+    window.location.href = './home_page/view/home_page.html';
 
     limparEResetarCadastro();
     mostrarTelaLogin();

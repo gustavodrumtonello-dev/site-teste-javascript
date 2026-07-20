@@ -18,7 +18,7 @@ export function fazerLogin() {
 
     if (inputEmail.value === 'exemplo@email.com') {
         if (inputSenha.value === '12345678') {
-            window.location.href = '../../home_page/view/home_page.html'; // Redireciona para a home
+            window.location.href = './home_page/view/home_page.html'; // Redireciona para a home
         } else {
             alert('Senha incorreta!');
         }
