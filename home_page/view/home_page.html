@@ -37,8 +37,8 @@
     </section>
 
     <!-- MODAL DE EDIÇÃO DE USUÁRIO -->
-    <div id="modal-editar" class="modal-overlay" onclick="fecharModalEditar()">
-        <div class="modal-container">
+    <div id="modal-editar" class="modal-overlay" onclick="fecharModal()">
+        <div class="modal-container" onclick="event.stopPropagation()">
             <h2 class="modal-titulo">Editar Usuário</h2>
 
             <!-- Campo oculto para guardar o id do usuário -->
@@ -89,7 +89,7 @@
     </div>
     <!-- MODAL DE CRIAÇÃO DE USUÁRIO -->
     <div id="modal-criar" class="modal-overlay" onclick="fecharModalCriar()">
-        <div class="modal-container">
+        <div class="modal-container" onclick="event.stopPropagation()">
             <h2 class="modal-titulo">Criar Novo Usuário</h2>
             <form id="form-criar" class="modal-form">
                 <div class="form-group">
@@ -126,18 +126,16 @@
                 <button id="btn-salvar-modal-criar" class="btn-salvar" onclick="salvarNovoUsuario()">Salvar</button>
             </div>
         </div>
+    </div>
 
-        <div id="modal-excluir" class="modal-overlay" onclick="fecharModalExcluir()">
-            <div class="modal-container">
-                <h2 class="modal-titulo">Confirmar Exclusão</h2>
-
-                <p>Tem certeza que deseja apagar o perfil de <strong id="nome-usuario-excluir"></strong>?</p>
-
-                <div class="modal-acoes">
-                    <button id="btn-cancelar-excluir" class="btn-cancelar"
-                        onclick="fecharModalExcluir()">Cancelar</button>
-                    <button id="btn-confirmar-excluir" class="btn-salvar" onclick="salvarExclusao()">Excluir</button>
-                </div>
+    <div id="modal-excluir" class="modal-overlay" onclick="fecharModalExcluir()">
+        <div class="modal-container" onclick="event.stopPropagation()">
+            <input type="hidden" id="input-id-excluir">
+            <h2 class="modal-titulo">Confirmar Exclusão</h2>
+            <p>Tem certeza que deseja apagar o perfil de <strong id="nome-usuario-excluir"></strong>?</p>
+            <div class="modal-acoes">
+                <button id="btn-cancelar-excluir" class="btn-cancelar" onclick="fecharModalExcluir()">Cancelar</button>
+                <button id="btn-confirmar-excluir" class="btn-salvar" onclick="confirmarExclusao()">Excluir</button>
             </div>
         </div>
     </div>

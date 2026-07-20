@@ -38,6 +38,8 @@ export async function create_usuario(novoUsuario) {
         .insert([novoUsuario]) // O Supabase espera um array para inserções
         .select();
 
+    if (error) console.error('Supabase error:', error);
+
     return data;
 }
 
