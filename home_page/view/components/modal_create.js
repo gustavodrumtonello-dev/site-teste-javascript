@@ -1,4 +1,4 @@
-import { create_usuario } from "../../service/usuarios_service.js";
+import { create_usuario } from "../../../api/usuarios_service.js";
 
 const modalCriarOverlay = document.getElementById('modal-criar');
 
