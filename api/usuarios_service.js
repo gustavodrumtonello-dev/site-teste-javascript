@@ -1,11 +1,12 @@
-import { createClient } from 'https://cdn.jsdelivr.net/npm/@supabase/supabase-js/+esm'
+const { createClient } = require('@supabase/supabase-js');
+require('dotenv').config();
 
 const supabaseUrl = process.env.SUPABASE_URL;
 const supabaseKey = process.env.SUPABASE_KEY;
 
 const supabase = createClient(supabaseUrl, supabaseKey)
 
-export async function get_usuarios() {
+async function get_usuarios() {
     const { data: usuarios, error } = await supabase
         .from('usuarios')
         .select('*');
@@ -13,7 +14,7 @@ export async function get_usuarios() {
     return usuarios;
 }
 
-export async function get_usuario(idUsuario) {
+async function get_usuario(idUsuario) {
     const { data: usuario, error } = await supabase
         .from('usuarios')
         .select('*')
@@ -23,7 +24,7 @@ export async function get_usuario(idUsuario) {
     return usuario;
 }
 
-export async function update_usuario(idUsuario, dadosEditados) {
+async function update_usuario(idUsuario, dadosEditados) {
     const { data, error } = await supabase
         .from('usuarios')
         .update(dadosEditados)
@@ -32,7 +33,7 @@ export async function update_usuario(idUsuario, dadosEditados) {
     return data;
 }
 
-export async function create_usuario(novoUsuario) {
+async function create_usuario(novoUsuario) {
     const { data, error } = await supabase
         .from('usuarios')
         .insert([novoUsuario]) // O Supabase espera um array para inserções
@@ -43,7 +44,7 @@ export async function create_usuario(novoUsuario) {
     return data;
 }
 
-export async function delete_usuario(idUsuario) {
+async function delete_usuario(idUsuario) {
     const { error } = await supabase
         .from('usuarios')
         .delete()
@@ -51,3 +52,11 @@ export async function delete_usuario(idUsuario) {
 
     return true;
 }
+
+module.exports = {
+    get_usuarios,
+    get_usuario,
+    update_usuario,
+    create_usuario,
+    delete_usuario
+};

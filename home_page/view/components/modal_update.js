@@ -1,4 +1,4 @@
-import { update_usuario } from "../../../api/usuarios_service.js";
+import { update_usuario } from "../../service/usuarios_service.js";
 
 const modalOverlay = document.getElementById('modal-editar');
 

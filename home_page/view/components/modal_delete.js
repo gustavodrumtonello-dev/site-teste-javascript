@@ -1,4 +1,4 @@
-import { delete_usuario } from "../../../api/usuarios_service.js";
+import { delete_usuario } from "../../service/usuarios_service.js";
 
 const modalExcluirOverlay = document.getElementById('modal-excluir');
 

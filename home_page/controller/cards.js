@@ -1,4 +1,4 @@
-import { get_usuarios } from "../../api/usuarios_service.js";
+import { get_usuarios } from "../service/usuarios_service.js";
 import { renderCardCriar } from "../view/components/card_criar.js";
 import { abrirModalCriar } from "../view/components/modal_create.js";
 

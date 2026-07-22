@@ -1,5 +1,6 @@
 import { get_usuario, update_usuario } from "../../home_page/service/usuarios_service.js";
 
+
 export async function createProfilePage() {
     const urlParams = new URLSearchParams(window.location.search);
     const userId = urlParams.get('id');
